@@ -1,7 +1,7 @@
-/* ****************************************************************************
+/* *************************************************************************************************
  * Copyright (c) 2020 MYF
  * All rights reserved.
- *************************************************************************** */
+ ************************************************************************************************ */
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -34,9 +34,8 @@ class App {
     this.express.use((req, res, next) => next(
       new ErrorHandler(
         404,
-        `Sorry, unless you really expected to find our 404 error message, the
-          API you are looking for does not exist, has been
-          moved or deleted.`,
+        `Sorry, unless you really expected to find our 404 error message, the API you are looking
+          for does not exist, has been moved or deleted.`,
       ),
     ));
 
