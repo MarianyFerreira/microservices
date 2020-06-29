@@ -1,7 +1,7 @@
-/* ****************************************************************************
+/* *************************************************************************************************
  * Copyright (c) 2020 MYF
  * All rights reserved.
- *************************************************************************** */
+ ************************************************************************************************ */
 
 const supertest = require('supertest');
 const app = require('../src/app');
@@ -12,9 +12,7 @@ describe('Startup server', () => {
     expect(body).toMatchObject({
       error: {
         status: 404,
-        message: `Sorry, unless you really expected to find our 404 error
-          message, the API you are looking for does not exist, has been moved or
-          deleted.`,
+        message: expect.stringContaining('Sorry, unless you really expected to find our 404 error'),
       },
     });
     done();
